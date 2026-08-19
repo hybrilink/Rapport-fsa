@@ -1430,7 +1430,7 @@
     <div id="historiqueModal" class="historique-modal" style="display:none;">
         <div class="historique-modal-content">
             <button class="close-modal" onclick="fermerHistorique()"><i class="bi bi-x-circle"></i> Fermer</button>
-            <h4 id="historiqueTitre"><i class="bi bi-clock-history"></i> Historique des paiements</h4>
+            <h4 id="historiqueTitre"><i class="bi bi-clock-history"></i> Relevé des paiements</h4>
             <div id="historiqueContenu"></div>
         </div>
     </div>
@@ -2473,7 +2473,7 @@
             const contenu = document.getElementById('historiqueContenu');
             const titre = document.getElementById('historiqueTitre');
             
-            titre.innerHTML = `<i class="bi bi-clock-history"></i> Historique des paiements - ${escapeHtml(etudiantNom)} 
+            titre.innerHTML = `<i class="bi bi-clock-history"></i> Relevé des paiements - ${escapeHtml(etudiantNom)} 
                 <button class="btn-print-historique" onclick="imprimerHistorique('${etudiantId}', '${escapeHtml(etudiantNom)}')">
                     <i class="bi bi-printer-fill"></i> Imprimer
                 </button>`;
@@ -2608,7 +2608,7 @@
             printWindow.document.write(`
                 <html>
                 <head>
-                    <title>Historique des paiements - ${etudiantNom}</title>
+                    <title>Relevé des paiements - ${etudiantNom}</title>
                     <style>
                         body { font-family: 'Segoe UI', sans-serif; padding: 20px; }
                         .print-header { display: flex; align-items: center; justify-content: center; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 4px solid #003366; }
@@ -2648,7 +2648,7 @@
                         </div>
                     </div>
                     <div class="print-date">DATE: ${now}</div>
-                    <h2 style="text-align:center;color:#003366;font-size:18px;">Historique des paiements - ${escapeHtml(etudiantNom)}</h2>
+                    <h2 style="text-align:center;color:#003366;font-size:18px;">RELEVE DES PAIEMENTS DE : ${escapeHtml(etudiantNom)}</h2>
                     <table>
                         <thead>
                             <tr>
